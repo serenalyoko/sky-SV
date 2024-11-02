@@ -6,14 +6,14 @@
 - We will add an pickle export funciton if needed. 
 
 ## calculate_SV.py
-Here are the input file instructions:
+### Here are the input file instructions:
 #### ValueFeaturesFile
 This file should be a .csv file that stores user id, nonsocial features, and social features
 
 #### NetworkFile
 This file should be a .csv file that stores source nodes, target nodes, and edge-weights. Edgeweights are optional. 
 
-Here are the imput parameter definitons
+### Here are the imput parameter definitons
 #### EmptyNeighborhoodFeatureValues - 
 List of Values that specifies a default value to be used when a particular social feature is missing or when there is an empty 
 neighborhood (e.g., no connections or interactions for a user).
