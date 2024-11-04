@@ -1,4 +1,31 @@
 # Social Value Analysis Using Sky Data
+## Querying data with python
+First, set up your virtual environment with the following commend lines:
+
+#### Mac/Linux
+```
+pip install virtualenv
+virtualenv <your-env>
+source <your-env>/bin/activate
+<your-env>/bin/pip install google-cloud-bigquery
+```
+
+#### Windows
+```
+pip install virtualenv
+virtualenv <your-env>
+<your-env>\Scripts\activate
+<your-env>\Scripts\pip.exe install google-cloud-bigquery
+```
+
+Then, in the `query_data.py` replace the following: 
+1. replace credential json file with your own API credentials
+2. replace `query_string` with your own query
+3. replace `out_file` name with your own desired file name
+
+Execute the code. 
+
+## Preparing data
 
 The `data_prep.py` contains two steps to prepare your SV calculation: 1) contructing network file and a unique user_id file called node list, 2) generate social features file
 
