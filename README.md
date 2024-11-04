@@ -1,9 +1,29 @@
 # Social Value Analysis Using Sky Data
-## Constructing_network.py 
+
+The `data_prep.py` contains two steps to prepare your SV calculation: 1) contructing network file and a unique user_id file called node list, 2) generate social features file
+
+## Constructing Network
 - Make sure you store all your data files in one folder. 
 - This function assumes data files as csv, but you can change the file i/o lines if you are using other types of data files
 - The write function exports network data into csv. This is for in case if you need to use gephi for network visualization. 
-- We will add an pickle export funciton if needed. 
+- We will add an pickle export funciton if needed.
+
+## Match user features with users in the network
+### Match user after download data from BigQuery
+- First query columns "random_id" and any features you would like to use for SV calculation
+- Save your results to a .csv file
+- Execute the `get_social_features()` function
+  
+### Querying social features with matched user ID in BigQuery
+You need to first upload your own unique node list file to sky_usc_datalab
+Then excute the following
+``` 
+SELECT *
+FROM `sky_usc_exports.user_profile` AS main_table
+JOIN `sky_usc_datalab.your_own_node_list` AS node_list
+ON main_table.random_id = node_list.node 
+WHERE first_level_loaded_date_pst >= "your-start-time" AND first_level_loaded_date_pst < "your-end-time"
+``` 
 
 ## calculate_SV.py
 ### Here are the input file instructions:
