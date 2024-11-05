@@ -8,6 +8,10 @@ pip install virtualenv
 virtualenv <your-env>
 source <your-env>/bin/activate
 <your-env>/bin/pip install google-cloud-bigquery
+pip install google
+pip install pandas
+pip install db-types
+pip install numpy
 ```
 
 #### Windows
@@ -16,6 +20,10 @@ pip install virtualenv
 virtualenv <your-env>
 <your-env>\Scripts\activate
 <your-env>\Scripts\pip.exe install google-cloud-bigquery
+pip install google
+pip install pandas
+pip install db-types
+pip install numpy
 ```
 
 Then, in the `query_data.py` replace the following: 
