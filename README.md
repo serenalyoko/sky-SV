@@ -11,7 +11,7 @@ source <your-env>/bin/activate
 pip install google
 pip install pandas
 pip install db-types
-pip install numpy
+pip install numpdy
 ```
 
 #### Windows
